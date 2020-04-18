@@ -111,7 +111,7 @@ defmodule Bind do
   end
 
   defmacro left ~>> right do
-    [{h, _} | t] = unbind({:|>, [], [left, right]})
+    [{h, _} | t] = unbind({:~>>, [], [left, right]})
 
     fun = fn {x, pos}, acc ->
       bind(acc, x, pos)
