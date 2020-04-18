@@ -2,6 +2,10 @@ defmodule Bind do
 
   alias Code.Identifier
 
+  # Formerly
+  # def {:ok, value}    ~>> f, do: f.(value)
+  # def {:error, error} ~>> _, do: {:error, error}
+
   @typedoc "Abstract Syntax Tree (AST)"
   @type t :: input
 
